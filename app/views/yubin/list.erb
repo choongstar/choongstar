@@ -1,0 +1,12 @@
+
+<% @every_post.each do |p| %>
+보내는이 : <%= p.from %> <br>
+받는이 : <%= p.who %> <br>
+제목 : <%= p.title %> <br>
+내용 : <%= p.content%><br>
+시간 : <%= p.created_at%>
+<a href="/update_view/<%= p.id %>"> [수정하기]</a>
+<a href="/destroy/<%= p.id %>"> [삭제]</a>
+
+<% end %>
+<h1><a href="/">돌아가기</a></h1>
